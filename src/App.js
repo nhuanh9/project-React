@@ -1,12 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import {Field, Form, Formik} from "formik";
+import {login} from "./services/userService";
+import {useDispatch, useSelector} from "react-redux";
 
 function App() {
-
+    const dispatch = useDispatch();
+    const user = useSelector(state => state.user)
     return (
         <div>
+            {user != null && user.username}
             <Formik
                 initialValues={
                     {
@@ -15,7 +19,7 @@ function App() {
                     }
                 }
                 onSubmit={(values)=> {
-                    console.log(values)
+                    login(values, dispatch);
                 }}
             >
                 <Form>
