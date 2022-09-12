@@ -7,13 +7,17 @@ import {Routes, Route, Link} from "react-router-dom";
 
 function App() {
     return (
-        <div className={'container'}>
-            <Routes>
-                <Route path={'/'} element={<Login/>}></Route>
-                <Route path={'home'} element={<Home/>}>
+        <div className={'container-fluid'}>
+            <div className={'row '}>
+                <div className={'col-12'}>
+                    <Routes>
+                        <Route path={'/'} element={<Login/>}></Route>
+                        <Route path={'home'} element={<Home/>}>
 
-                </Route>
-            </Routes>
+                        </Route>
+                    </Routes>
+                </div>
+            </div>
         </div>
     );
 }

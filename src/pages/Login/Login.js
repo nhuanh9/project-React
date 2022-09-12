@@ -2,7 +2,8 @@
 function Login() {
     return (
         <>
-            <form>
+            <form className={'offset-4 col-4'}>
+                <h1 className={'text-center'}>Login</h1>
                 <div className="form-group">
                     <label htmlFor="exampleInputEmail1">Email address</label>
                     <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></input>
